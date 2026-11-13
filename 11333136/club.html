@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&family=Rye&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    <title>社團經歷</title>
+    <style>
+        :root {
+            --bg-color: #000000;
+            --card-bg: #2C2C32;
+            --text-main: #FFFFFF;
+            --text-sub: #B0B0B8;
+            --border-color: #4A4A52;
+            --accent-pink: #F9E4E8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Noto Serif TC", serif;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+            }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
+            background: linear-gradient(to bottom, #070707 0%,rgb(0, 0, 0)40%, #fccde7 100%);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1.5rem;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1{
+            text-align: center;
+            font-size: 40px;
+            color:rgb(242, 200, 222) ;
+        }
+        h2{
+            color:rgb(242, 200, 222);
+            text-align: center;
+
+        }
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .square {
+            width: 320px;
+            height: 320px;
+            border-radius: 8px;
+            background-color: #1A1A1E;
+            border: 2px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+        }
+
+        .square img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .square span {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+        }
+
+        .tag-group {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+        .club-wrapper {
+            width: 100%;
+            aspect-ratio: 628 / 288;
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .club-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.6s ease-in-out;
+        }
+
+        .club-slide.active {
+            opacity: 1;
+        }
+
+        .club-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .info-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .info-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-main);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.4rem;
+            display: inline-block;
+        }
+
+        .info-card p, .info-card li {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+        }
+
+        .info-card ul {
+            padding-left: 1.2rem;
+        }
+
+        .info-card li {
+            margin-bottom: 0.4rem;
+        }
+        .image-group {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 1.5rem;                           
+            width: 100%;
+        }
+
+        .image-group img {
+            width: 100%;
+            height: 100%;                         
+            object-fit: cover;                     
+            border-radius: 12px;                  
+        }
+        .btn-container {
+            text-align: center;
+            margin-top: 2.5rem;
+        }
+
+        .home-btn {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background-color: var(--card-bg);
+            color: var(--text-main) ;
+            border: 1px solid var(--border-color);
+            border-radius: 25px;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }        
+        p{
+            color: #ffddea;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>社團經歷</h1>
+        <div class="profile-section">
+            <div class="square">
+                <img src="image/S__94519313_0.jpg" alt="我的照片">
+            </div>
+            <h2>林書秀</h2>
+            <div class="tag-group">
+                <span class="tag">熱舞社幹部</span>
+                <span class="tag">美宣</span>
+            </div>
+        </div>
+
+        <div class="club-wrapper">
+            <div class="club-slide active">
+                <img src="image/S__94519302_0.jpg" alt="社團活動 1">
+            </div>
+            <div class="club-slide">
+                <img src="image/S__94519301_0.jpg" alt="社团活動 2">
+            </div>
+            <div class="club-slide">
+                <img src="image/S__94519304_0.jpg" alt="社團活動 3">
+            </div>
+            <div class="club-slide">
+                <img src="image/S__94519303_0.jpg" alt="社團活動 4">
+            </div>
+            <div class="club-slide">
+                <img src="image/S__94519305_0.jpg" alt="社團活動 5">
+            </div>
+            <div class="club-slide">
+                <img src="image/79F329E9-DE6A-4C0E-AED9-E9A9C787CEC8.jpg" alt="社團活動 6">
+            </div>
+        </div>
+
+        <div class="image-group">
+            <img src="image/S__94519308_0.jpg" alt="社團活動 7">
+            <img src="image/S__94519307_0.jpg" alt="社團活動 8">
+            <img src="image/S__94519309_0.jpg" alt="社團活動 9">
+        </div>
+        <div class="info-card" style="margin-top: 2rem;">
+            <h3>社團經歷說明</h3>
+            <p>
+                擔任美宣期間，主要負責社群貼文、活動海報等視覺統籌。透過之前的設計經歷，<br>
+                精進了數位設計與排版能力，同時在參與社團日常營運與成發中，磨練了團隊溝通協調的經驗，<br>
+                這段經歷讓我在轉系後依然能延續對設計的熱忱，並在團隊中培養出高效率的執行力與責任感，大學生活也更加精采
+            </p>
+        </div>
+        <br>
+        <div class="image-group">
+            <img src="image/S__94519315.jpg" alt="社團活動 ">
+            <img src="image/S__94519312_0.jpg" alt="社團活動 ">
+            <img src="image/S__94519311_0.jpg" alt="社團活動 ">
+        </div>
+        <div class="btn-container">
+            <a href="index.html" class="home-btn">← 返回首頁</a>
+        </div>
+    
+    <!-- 輪播圖循環利用計時器 setInterval(showNextSlide, ) 設定秒數 -->
+     <script>
+        const slides = document.querySelectorAll('.club-slide');
+        let currentIndex = 0;
+
+        function showNextSlide() {
+            slides[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % slides.length;
+            slides[currentIndex].classList.add('active');
+        }
+
+        setInterval(showNextSlide, 2000);
+    </script>
+</body>
+</html>
